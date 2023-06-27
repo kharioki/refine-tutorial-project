@@ -13,6 +13,8 @@ import dataProvider from "@refinedev/simple-rest";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { AntdInferencer } from "@refinedev/inferencer/antd";
 
+import { BlogPostList } from "pages/blog-posts/list";
+
 import { ConfigProvider } from "antd";
 import "@refinedev/antd/dist/reset.css";
 
@@ -50,7 +52,7 @@ const App: React.FC = () => {
                         >
                             <Route index element={<NavigateToResource resource="blog_posts" />} />
                             <Route path="blog-posts">
-                                <Route index element={<AntdInferencer />} />
+                                <Route index element={<BlogPostList />} />
                                 <Route
                                     path="show/:id"
                                     element={<AntdInferencer />}
